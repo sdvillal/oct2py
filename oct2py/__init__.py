@@ -63,10 +63,11 @@ from .speed_check import speed_check
 from .thread_check import thread_check
 
 
-try:
-    octave = Oct2Py()
-except Oct2PyError as e:
-    print(e)
+# (1) This is quite intrusive
+# try:
+#     octave = Oct2Py()
+# except Oct2PyError as e:
+#     print(e)
 
 
 def kill_octave():
@@ -81,7 +82,8 @@ def kill_octave():
     else:
         os.system('killall -9 octave')
         os.system('killall -9 octave-cli')
-    octave.restart()
+    # this can lead to error if (1) fails
+    # octave.restart()
 
 
 # clean up namespace
