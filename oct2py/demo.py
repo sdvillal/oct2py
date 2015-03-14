@@ -10,7 +10,7 @@ import time
 from .compat import PY2
 
 
-def demo(delay=2, interactive=True):
+def demo(delay=1, interactive=True):
     """
     Play a demo script showing most of the oct2py api features.
 
@@ -31,7 +31,7 @@ def demo(delay=2, interactive=True):
     print(oc.abs(-1))
     print(oc.upper('xyz'))
     # plotting
-    oc.plot([1,2,3],'-o')
+    oc.plot([1,2,3],'-o', linewidth=2)
     raw_input('Press Enter to continue...')
     oc.close()
     xx = np.arange(-2*np.pi, 2*np.pi, 0.2)
@@ -77,4 +77,4 @@ def demo(delay=2, interactive=True):
         exec(line)
 
 if __name__ == '__main__':  # pragma: no cover
-    demo(delay=0.5)
+    demo(delay=0.25)

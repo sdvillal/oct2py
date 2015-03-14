@@ -3,6 +3,22 @@
 Release History
 ---------------
 
+3.1.0 (2015-02-13)
+++++++++++++++++++
+- Fix handling of temporary files for multiprocessing
+- Clean up handling of plot settings
+
+
+3.0.0 (2015-01-10)
+++++++++++++++++++
+- Add `convert_to_float` property that is True by default.
+- Suppress output in dynamic function calls (using ';')
+
+
+2.4.2 (2014-12-19)
+++++++++++++++++++
+- Add support for Octave 3.8 on Windows
+
 2.4.1 (2014-10-22)
 ++++++++++++++++++
 - Prevent zombie octave processes.
